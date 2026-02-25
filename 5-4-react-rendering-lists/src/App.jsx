@@ -123,7 +123,8 @@ import { sampleCourses } from "./data";
 import CourseCard from "./components/CourseCard";
 import "./index.css";
 
-export default function App() {
+export default function App() 
+{
   const [courses, setCourses] = useState(sampleCourses);
 
   // Helper function (no need to edit this)
@@ -143,16 +144,14 @@ export default function App() {
       </header>
 
       <section className="grid">
-        {/* TODO (TASK 1): Render all courses using courses.map(...)
+        /* TODO (TASK 1): Render all courses using courses.map(...)
       For each course render <CourseCard /> and pass:
         - key={course.id}
         - course={course}
         - index={idx}
         - onMutateCourse={mutateCourseByIndex}
   */
-  
-  
-        courses.map((course, idx) => (
+        {courses.map((course, idx) => (
           <CourseCard
             key={course.id}
             course={course}
