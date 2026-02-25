@@ -42,6 +42,11 @@
    → Go to the <section className="grid"> block near the bottom of App.jsx.
      Replace the TODO comment with your .map() code.
 
+
+  */
+
+
+ /*
    =========================================================
    TASK 2 — Render Tasks for Each Course
    File: src/components/CourseCard.jsx
@@ -144,8 +149,22 @@ export default function App() {
         - course={course}
         - index={idx}
         - onMutateCourse={mutateCourseByIndex}
-  */}
+  */
+  
+  
+        courses.map((course, idx) => (
+          <CourseCard
+            key={course.id}
+            course={course}
+            index={idx}
+            onMutateCourse={mutateCourseByIndex}
+          />
+        ))}
       </section>
     </main>
   );
+ 
+
+    
+
 }
